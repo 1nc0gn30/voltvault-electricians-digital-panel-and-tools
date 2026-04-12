@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Avenir Next", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+@layer base {
+  :root {
+    --vv-bg: #030712;
+    --vv-bg-soft: #111827;
+    --vv-surface: #0f172a;
+    --vv-surface-elev: #1e293b;
+    --vv-border: #334155;
+    --vv-text: #e2e8f0;
+    --vv-text-soft: #94a3b8;
+    --vv-accent: #fbbf24;
+  }
+
+  * {
+    scrollbar-color: #334155 transparent;
+  }
+
+  body {
+    @apply antialiased;
+    min-height: 100vh;
+    color: var(--vv-text);
+    background:
+      radial-gradient(1200px 500px at 100% -10%, #172554 0%, transparent 55%),
+      radial-gradient(900px 400px at -10% 110%, #3f6212 0%, transparent 60%),
+      linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  }
+
+  input,
+  select,
+  textarea {
+    color: #e2e8f0;
+  }
+}
+
+@layer utilities {
+  .vv-card {
+    @apply bg-slate-900/90 border border-slate-700/70 shadow-xl shadow-black/20 backdrop-blur-sm;
+  }
+
+  .vv-button-primary {
+    @apply bg-amber-400 text-slate-950 hover:bg-amber-300 font-bold;
+  }
+
+  .vv-button-secondary {
+    @apply bg-slate-800 text-slate-100 border border-slate-700 hover:bg-slate-700 font-bold;
+  }
+
+  .vv-input {
+    @apply bg-slate-900 border border-slate-700 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-amber-400 outline-none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full hover:bg-slate-500 transition-colors;
+  }
+}

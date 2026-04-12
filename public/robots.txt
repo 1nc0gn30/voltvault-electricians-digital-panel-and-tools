@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voltvault-electricians-digital-panel-and-tools.nealfrazier.tech/sitemap.xml
