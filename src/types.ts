@@ -22,6 +22,9 @@ export interface Document {
   type: 'contract' | 'invoice';
   url?: string;
   date: number;
+  mimeType?: string;
+  sizeBytes?: number;
+  extension?: string;
 }
 
 export interface Breaker {
